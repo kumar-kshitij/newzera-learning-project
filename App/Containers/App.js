@@ -1,22 +1,8 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text } from 'react-native'
-import DecagonalImageContainer from '../Components/DecagonalImageContainer'
+import ProfileScreen from './ProfileScreen'
 
 const App = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <DecagonalImageContainer />
-    </SafeAreaView>
-  )
+  return <ProfileScreen />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white'
-  }
-})
 
 export default App
