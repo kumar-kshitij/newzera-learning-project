@@ -1,8 +1,18 @@
-import React from 'react'
-import ProfileScreen from './ProfileScreen'
+import React, { useReducer } from 'react'
+import { MenuProvider } from 'react-native-popup-menu'
+import StoryContext, { storyReducer, initialStory } from '../Contexts/StoryContext'
+import AppNavigator from '../Navigators/AppNavigator'
 
 const App = () => {
-  return <ProfileScreen />
+  const [story, dispatch] = useReducer(storyReducer, initialStory)
+
+  return (
+    <StoryContext.Provider value={{ story, dispatch }}>
+      <MenuProvider>
+        <AppNavigator />
+      </MenuProvider>
+    </StoryContext.Provider>
+  )
 }
 
 export default App

@@ -3,13 +3,13 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
+    padding: 30
   },
   topSection: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 30,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   midSection: {
     flex: 1,
@@ -18,12 +18,10 @@ export default StyleSheet.create({
   },
   bottomSection: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
-    marginHorizontal: 30,
     paddingHorizontal: 30,
     paddingTop: 10,
-    paddingBottom: 30,
-    alignItems: 'center',
     position: 'relative',
     borderTopColor: '#fbba38',
     borderTopWidth: 1
@@ -39,7 +37,7 @@ export default StyleSheet.create({
   nameText: {
     color: '#888888',
     fontSize: 24,
-    marginTop: 50,
+    marginTop: 30,
     marginBottom: 10
   },
   occupationText: {
@@ -49,5 +47,11 @@ export default StyleSheet.create({
   websiteText: {
     color: '#888888',
     fontSize: 16
+  },
+  optionText: {
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    fontSize: 18,
+    fontWeight: 'bold'
   }
 })

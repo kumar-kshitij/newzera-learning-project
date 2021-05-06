@@ -9,7 +9,7 @@ type Props = {
   size: number,
   borderColor: string,
   borderWidth: number,
-  imgSrc: string,
+  imageSource?: string,
   children?: (right: number, bottom: number) => Node
 }
 
@@ -40,7 +40,11 @@ const DecagonalImageContainer = (props: Props) => {
           width={innerPolygonSize}
           height={innerPolygonSize}
           preserveAspectRatio="xMidYMid slice"
-          href={props.imgSrc}
+          href={
+            props.imageSource
+              ? props.imageSource
+              : 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg'
+          }
           clipPath="url(#clip)"
         />
         <Polyline
@@ -64,8 +68,7 @@ const DecagonalImageContainer = (props: Props) => {
 DecagonalImageContainer.defaultProps = {
   size: 250,
   borderColor: '#000000',
-  borderWidth: 5,
-  imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg'
+  borderWidth: 5
 }
 
 export default DecagonalImageContainer
