@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext } from 'react'
 import { View, StyleSheet, Image, Text, Animated, Easing } from 'react-native'
-import StoryContext from '../Contexts/StoryContext'
+import StoryContext from '../StoryContext'
 import styles from './Styles/StoryScreenStyles'
 
 const StoryScreen = ({ navigation }) => {

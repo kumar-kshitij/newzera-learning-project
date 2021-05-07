@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import { View, StyleSheet, TouchableOpacity, Image, TextInput, Text } from 'react-native'
 import { launchImageLibrary } from 'react-native-image-picker'
 import { LeftCaret } from '../Components'
-import StoryContext from '../Contexts/StoryContext'
+import StoryContext from '../StoryContext'
 import styles from './Styles/AddStoryScreenStyles'
 
 const AddStoryScreen = ({ navigation }) => {
@@ -62,11 +62,16 @@ const AddStoryScreen = ({ navigation }) => {
         style={styles.bottomRightButton}
         onPress={() => {
           if (imageURI && headline && description) {
-            dispatch({ type: 'update_availability', payload: true })
-            dispatch({ type: 'update_viewing', payload: false })
-            dispatch({ type: 'update_image_uri', payload: imageURI })
-            dispatch({ type: 'update_headline', payload: headline })
-            dispatch({ type: 'update_description', payload: description })
+            dispatch({
+              type: 'update_story',
+              payload: {
+                isAvailable: true,
+                isViewed: false,
+                imageURI,
+                headline,
+                description
+              }
+            })
             navigation.navigate('ProfileScreen')
           }
         }}>

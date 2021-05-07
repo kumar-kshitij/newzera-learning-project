@@ -54,3 +54,5 @@ export const getTrianglePoints = (height: number, sideLength: number) => {
     [sideLength, height]
   ]
 }
+
+export const SERVER_URL = 'http://192.168.135.177:4000'

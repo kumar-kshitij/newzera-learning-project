@@ -49,9 +49,13 @@ export default StyleSheet.create({
     fontSize: 16
   },
   optionText: {
-    paddingHorizontal: 30,
     paddingVertical: 15,
-    fontSize: 18,
-    fontWeight: 'bold'
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#fbba38',
+    borderColor: '#fbba38',
+    borderWidth: 1,
+    borderRadius: 5
   }
 })
