@@ -1,0 +1,80 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "func-names": "off",
+    "camelcase": "off",
+    "no-use-before-define": "off",
+    "no-console": "off",
+    "no-useless-catch": "off",
+    "no-useless-concat": "off",
+    "no-plusplus": "off",
+    "new-cap": "off",
+    "no-inner-declarations": "off",
+    "no-underscore-dangle": [
+      2,
+      {
+        "allow": [
+          "__resolveType"
+        ]
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "graphql": "always"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  }
+}
