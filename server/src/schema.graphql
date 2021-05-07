@@ -1,0 +1,20 @@
+type User {
+  id: Int!
+  name: String!
+  occupation: String!
+  website: String!
+  picURL: String
+}
+
+type Query {
+  user(id: Int!): User
+}
+
+type Mutation {
+  addProfilePicture(id: Int!, pic: Upload): AddProfilePictureMutationResponse
+}
+
+type AddProfilePictureMutationResponse {
+  success: Boolean!
+  user: User
+}

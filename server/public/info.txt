@@ -1,0 +1,1 @@
+user uploaded (static) files are served from this directory
