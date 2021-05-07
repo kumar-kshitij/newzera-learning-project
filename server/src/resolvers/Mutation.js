@@ -1,3 +1,6 @@
+const fs = require('fs')
+const path = require('path')
+
 async function addProfilePicture(parent, args, context, info) {
   try {
     const user = await context.prisma.user.findUnique({
@@ -20,7 +23,7 @@ async function addProfilePicture(parent, args, context, info) {
 
       await new Promise((resolve, reject) => {
         const stream = createReadStream()
-        stream.pipe(fs.createWriteStream(path.join(__dirname, '../public', newFilename)))
+        stream.pipe(fs.createWriteStream(path.join(__dirname, '../../public', newFilename)))
         stream.on('end', resolve)
         stream.on('error', reject)
       })
